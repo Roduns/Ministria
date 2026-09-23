@@ -1,0 +1,85 @@
+<div class="header-ministria">
+
+  <h1 class="titulo-app">
+    MINISTRIA
+  </h1>
+
+  <p class="eslogan">
+    Organiza tu servicio. Proyecta tu mensaje.
+  </p>
+
+</div>
+
+<div class="tabs">
+
+  <button>
+    📖 Biblia
+  </button>
+
+  <button
+    (click)="abrirAlabanzas()">
+    🎵 Alabanzas
+  </button>
+
+  <button>
+    🖼 Imagen
+  </button>
+
+  <button>
+    📢 Anuncio
+  </button>
+
+  <button>
+    🎥 Video
+  </button>
+
+</div>
+
+<h1>📖 Biblia</h1>
+
+<input
+  [(ngModel)]="referencia"
+  placeholder="Juan 3:16"
+/>
+
+<button
+  (click)="buscarVersiculo()">
+  Buscar
+</button>
+
+<div class="versiculo-card">
+
+  <div class="info-versiculo">
+
+    <span class="referencia">
+      {{ referencia }}
+    </span>
+
+    <span class="version">
+      RV60
+    </span>
+
+  </div>
+
+  <p class="versiculo-texto">
+    {{ resultado }}
+  </p>
+
+  <div class="acciones">
+
+    <button
+      (click)="agregarAlServicio()">
+      ➕ Añadir al Servicio
+    </button>
+
+    <button>
+      📺 Proyectar
+    </button>
+
+    <button>
+      🤖 Crear Imagen IA
+    </button>
+
+  </div>
+
+</div>

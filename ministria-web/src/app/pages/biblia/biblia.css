@@ -1,0 +1,175 @@
+*{
+  box-sizing:border-box;
+}
+
+.header-ministria{
+
+  text-align:center;
+
+  margin-bottom:30px;
+}
+
+.titulo-app{
+
+  margin:0;
+
+  font-size:70px;
+
+  font-weight:bold;
+
+  color:#2563eb;
+}
+
+.eslogan{
+
+  margin-top:10px;
+
+  color:#64748b;
+
+  font-size:20px;
+}
+
+.tabs{
+
+  display:flex;
+
+  gap:15px;
+
+  flex-wrap:wrap;
+
+  margin-bottom:40px;
+}
+
+.tabs button{
+
+  background:#2563eb;
+
+  color:white;
+
+  border:none;
+
+  padding:16px 24px;
+
+  border-radius:12px;
+
+  font-size:16px;
+
+  cursor:pointer;
+}
+
+.tabs button:hover{
+
+  background:#1d4ed8;
+}
+
+h1{
+
+  color:#2563eb;
+
+  font-size:60px;
+
+  margin-bottom:30px;
+}
+
+input{
+
+  width:500px;
+
+  padding:15px;
+
+  border:1px solid #cbd5e1;
+
+  border-radius:12px;
+
+  font-size:18px;
+}
+
+button{
+
+  background:#2563eb;
+
+  color:white;
+
+  border:none;
+
+  padding:15px 24px;
+
+  border-radius:12px;
+
+  cursor:pointer;
+
+  margin-left:10px;
+}
+
+button:hover{
+
+  background:#1d4ed8;
+}
+
+.versiculo-card{
+
+  margin-top:30px;
+
+  background:#f8fafc;
+
+  border-left:6px solid #2563eb;
+
+  padding:30px;
+
+  border-radius:15px;
+
+  box-shadow:
+    0 2px 10px rgba(0,0,0,.08);
+}
+
+.info-versiculo{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  margin-bottom:20px;
+}
+
+.referencia{
+
+  color:#2563eb;
+
+  font-weight:bold;
+
+  font-size:20px;
+}
+
+.version{
+
+  background:#2563eb;
+
+  color:white;
+
+  padding:5px 15px;
+
+  border-radius:20px;
+}
+
+.versiculo-texto{
+
+  font-size:22px;
+
+  line-height:1.8;
+
+  color:#1e293b;
+}
+
+.acciones{
+
+  display:flex;
+
+  gap:15px;
+
+  margin-top:25px;
+}
+
+.acciones button{
+
+  margin-left:0;
+}

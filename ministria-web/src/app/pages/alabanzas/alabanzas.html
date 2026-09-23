@@ -1,0 +1,54 @@
+<h1>🎵 Alabanzas</h1>
+
+<p class="subtitulo">
+  Agregue canciones mediante una URL de YouTube.
+</p>
+
+<input
+  [(ngModel)]="urlCancion"
+  placeholder="https://www.youtube.com/watch?v=..."
+/>
+
+<button
+  (click)="agregarCancion()">
+  ➕ Agregar Canción
+</button>
+
+<div
+  class="cancion-card"
+  *ngFor="let cancion of canciones; let i = index">
+
+  <h3>
+    🎵 Canción {{ i + 1 }}
+  </h3>
+
+  <p>
+    {{ cancion }}
+  </p>
+
+  <div class="acciones">
+
+    <button
+      (click)="proyectar(cancion)">
+      📺 Proyectar
+    </button>
+
+    <button
+      (click)="subirCancion(i)">
+      ▲ Subir
+    </button>
+
+    <button
+      (click)="bajarCancion(i)">
+      ▼ Bajar
+    </button>
+
+    <button
+      class="eliminar"
+      (click)="eliminarCancion(i)">
+      ✖ Eliminar
+    </button>
+
+  </div>
+
+</div>
