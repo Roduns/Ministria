@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { Biblia } from './pages/biblia/biblia';
 import { Servicio } from './pages/servicio/servicio';
 import { Alabanzas } from './pages/alabanzas/alabanzas';
+import { Multimedia } from './pages/multimedia/multimedia';
 
 export const routes: Routes = [
 
@@ -14,6 +15,11 @@ export const routes: Routes = [
   {
     path: 'alabanzas',
     component: Alabanzas
+  },
+
+  {
+    path: 'multimedia',
+    component: Multimedia
   },
 
   {

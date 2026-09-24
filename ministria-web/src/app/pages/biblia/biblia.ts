@@ -98,15 +98,28 @@ export class Biblia {
 
     });
 
-    alert('Versículo añadido al servicio');
+    alert(
+      'Versículo añadido al servicio'
+    );
 
   }
-  abrirAlabanzas() {
-window.open(
-window.location.origin + '/alabanzas',
-'_blank'
-);
 
-}
+  abrirAlabanzas() {
+
+    window.open(
+      window.location.origin + '/alabanzas',
+      '_blank'
+    );
+
+  }
+
+  abrirMultimedia() {
+
+    window.open(
+      window.location.origin + '/multimedia',
+      '_blank'
+    );
+
+  }
 
 }

@@ -1,0 +1,206 @@
+h1 {
+
+  color: #2563eb;
+
+  font-size: 60px;
+
+  margin-bottom: 20px;
+}
+
+.subtitulo {
+
+  color: #64748b;
+
+  font-size: 18px;
+
+  margin-bottom: 25px;
+}
+
+.formulario {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  max-width: 800px;
+}
+
+label {
+
+  font-weight: bold;
+
+  color: #334155;
+}
+
+input {
+
+  padding: 15px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+}
+
+textarea {
+
+  padding: 15px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  resize: vertical;
+}
+
+.acciones-principales {
+
+  margin-top: 20px;
+
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+button {
+
+  background: #2563eb;
+
+  color: white;
+
+  border: none;
+
+  padding: 12px 20px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+button:hover {
+
+  background: #1d4ed8;
+}
+
+.ia-btn {
+
+  background: #7c3aed;
+}
+
+.ia-btn:hover {
+
+  background: #6d28d9;
+}
+
+.preview {
+
+  margin-top: 30px;
+
+  background: #f8fafc;
+
+  border-left: 6px solid #2563eb;
+
+  padding: 25px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+
+  max-width: 900px;
+}
+
+.preview h2 {
+
+  margin-top: 0;
+
+  color: #1e293b;
+}
+
+.preview p {
+
+  color: #475569;
+
+  line-height: 1.6;
+
+  white-space: pre-wrap;
+}
+
+hr {
+
+  margin: 40px 0;
+
+  border: none;
+
+  border-top: 2px solid #e2e8f0;
+}
+
+.archivo-card {
+
+  margin-top: 25px;
+
+  background: #f8fafc;
+
+  border-left: 6px solid #2563eb;
+
+  padding: 25px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+.preview-imagen {
+
+  max-width: 500px;
+
+  max-height: 350px;
+
+  border-radius: 12px;
+
+  margin-top: 15px;
+
+  border: 2px solid #e2e8f0;
+
+  display: block;
+}
+
+.preview-video {
+
+  max-width: 700px;
+
+  max-height: 400px;
+
+  border-radius: 12px;
+
+  margin-top: 15px;
+
+  display: block;
+}
+
+.acciones {
+
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin-top: 20px;
+}
+
+.eliminar {
+
+  background: #dc2626;
+}
+
+.eliminar:hover {
+
+  background: #b91c1c;
+}

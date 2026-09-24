@@ -1,0 +1,64 @@
+<h1>🖼 Imagen</h1>
+
+<p class="subtitulo">
+  Seleccione imágenes para proyectar.
+</p>
+
+<input
+  type="file"
+  accept="image/*"
+  (change)="seleccionarImagen($event)"
+/>
+
+<div class="panel-ia">
+
+  <button class="ia-btn">
+    🤖 Generar Imagen con IA
+  </button>
+
+</div>
+
+<p>
+  Imágenes cargadas: {{ imagenes.length }}
+</p>
+
+<div
+  class="imagen-card"
+  *ngFor="let imagen of imagenes; let i = index">
+
+  <h3>
+    🖼 Imagen {{ i + 1 }}
+  </h3>
+
+  <img
+    [src]="imagen"
+    alt="Vista previa"
+    class="preview"
+  />
+
+  <div class="acciones">
+
+    <button
+      (click)="agregarAlServicio(imagen)">
+      ➕ Añadir al Servicio
+    </button>
+
+    <button
+      (click)="subirImagen(i)">
+      ▲ Subir
+    </button>
+
+    <button
+      (click)="bajarImagen(i)">
+      ▼ Bajar
+    </button>
+
+    <button
+      class="eliminar"
+      (click)="eliminarImagen(i)">
+      ✖ Eliminar
+    </button>
+
+  </div>
+
+</div>

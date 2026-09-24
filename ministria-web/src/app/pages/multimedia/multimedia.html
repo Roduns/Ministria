@@ -1,0 +1,130 @@
+<h1>📢 Multimedia</h1>
+
+<p class="subtitulo">
+  Cree anuncios, cargue imágenes o videos y genere contenido con IA.
+</p>
+
+<div class="formulario">
+
+  <label>
+    Título
+  </label>
+
+  <input
+    type="text"
+    [(ngModel)]="titulo"
+    placeholder="Ej: Retiro Juvenil"
+  />
+
+  <label>
+    Contenido
+  </label>
+
+  <textarea
+    [(ngModel)]="contenido"
+    rows="8"
+    placeholder="Escriba aquí el anuncio..."
+  ></textarea>
+
+</div>
+
+<div class="acciones-principales">
+
+  <button class="ia-btn">
+    🤖 Generar Imagen con IA
+  </button>
+
+  <button
+    (click)="agregarAnuncioAlServicio()">
+    ➕ Añadir Anuncio al Servicio
+  </button>
+
+</div>
+
+<div
+  class="preview"
+  *ngIf="titulo || contenido">
+
+  <h2>
+    {{ titulo }}
+  </h2>
+
+  <p>
+    {{ contenido }}
+  </p>
+
+</div>
+
+<hr>
+
+<h2>📁 Cargar Imagen o Video</h2>
+
+<input
+  type="file"
+  accept="image/*,video/*"
+  (change)="seleccionarArchivo($event)"
+/>
+
+<p>
+  Archivos cargados:
+  {{ archivos.length }}
+</p>
+
+<div
+  class="archivo-card"
+  *ngFor="let archivo of archivos; let i = index">
+
+  <h3>
+
+    <span *ngIf="archivo.tipo === 'imagen'">
+      🖼 Imagen
+    </span>
+
+    <span *ngIf="archivo.tipo === 'video'">
+      🎥 Video
+    </span>
+
+    {{ i + 1 }}
+
+  </h3>
+
+  <img
+    *ngIf="archivo.tipo === 'imagen'"
+    [src]="archivo.url"
+    alt="Vista previa"
+    class="preview-imagen"
+  />
+
+  <video
+    *ngIf="archivo.tipo === 'video'"
+    [src]="archivo.url"
+    controls
+    class="preview-video">
+  </video>
+
+  <div class="acciones">
+
+    <button
+      (click)="agregarArchivoAlServicio(archivo)">
+      ➕ Añadir al Servicio
+    </button>
+
+    <button
+      (click)="subirArchivo(i)">
+      ▲ Subir
+    </button>
+
+    <button
+      (click)="bajarArchivo(i)">
+      ▼ Bajar
+    </button>
+
+    <button
+      class="eliminar"
+      (click)="eliminarArchivo(i)">
+      ✖ Eliminar
+    </button>
+
+  </div>
+
+</div>
