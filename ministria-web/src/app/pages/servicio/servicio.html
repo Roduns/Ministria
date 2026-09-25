@@ -1,2 +1,109 @@
+<h1>📋 Servicio</h1>
 
-<h1>Servicio</h1>
+<p class="subtitulo">
+  Elementos agregados para la proyección.
+</p>
+
+<p class="contador">
+  Total de elementos:
+  {{ servicioService.elementos.length }}
+</p>
+
+<div
+  class="elemento-card"
+  *ngFor="let elemento of servicioService.elementos; let i = index">
+
+  <h3>
+
+    <span *ngIf="elemento.tipo === 'versiculo'">
+      📖 Versículo
+    </span>
+
+    <span *ngIf="elemento.tipo === 'anuncio'">
+      📢 Anuncio
+    </span>
+
+    <span *ngIf="elemento.tipo === 'imagen'">
+      🖼 Imagen
+    </span>
+
+    <span *ngIf="elemento.tipo === 'video'">
+      🎥 Video
+    </span>
+
+    <span *ngIf="elemento.tipo === 'alabanza'">
+      🎵 Alabanza
+    </span>
+
+    {{ i + 1 }}
+
+  </h3>
+
+  <p *ngIf="elemento.referencia">
+    <strong>{{ elemento.referencia }}</strong>
+  </p>
+
+  <p *ngIf="elemento.texto">
+    {{ elemento.texto }}
+  </p>
+
+  <p *ngIf="elemento.titulo">
+    <strong>{{ elemento.titulo }}</strong>
+  </p>
+
+  <p *ngIf="elemento.contenido">
+    {{ elemento.contenido }}
+  </p>
+
+  <p *ngIf="elemento.nombre">
+    {{ elemento.nombre }}
+  </p>
+
+  <p *ngIf="elemento.urlCancion">
+    {{ elemento.urlCancion }}
+  </p>
+
+  <img
+    *ngIf="elemento.tipo === 'imagen'"
+    [src]="elemento.url"
+    class="preview-imagen"
+  />
+
+  <video
+    *ngIf="elemento.tipo === 'video'"
+    [src]="elemento.url"
+    controls
+    class="preview-video">
+  </video>
+
+  <div class="acciones">
+
+    <button
+      (click)="subir(i)">
+      ▲ Subir
+    </button>
+
+    <button
+      (click)="bajar(i)">
+      ▼ Bajar
+    </button>
+
+    <button
+      class="eliminar"
+      (click)="eliminar(i)">
+      ✖ Eliminar
+    </button>
+
+  </div>
+
+</div>
+
+<div class="acciones-finales">
+
+  <button
+class="proyectar"
+(click)="proyectarServicio()">
+📺 Proyectar Servicio
+</button>
+
+</div>

@@ -1,0 +1,32 @@
+<h1>🤖 IA</h1>
+
+<p>
+  Escribe un tema.
+</p>
+
+<input
+  [(ngModel)]="consulta"
+  placeholder="amor, fe, esperanza..."
+>
+
+<button
+  (click)="generar()">
+  Generar
+</button>
+
+<div *ngIf="respuesta">
+
+  <h3>
+    Resu*tado
+  </h3>
+
+  <p>
+    {{ respues*a }}
+  </p>
+
+  <button
+    (click)*"agregarAlServicio()">
+    ➕ Añadi* al Servicio
+  </button>
+
+</div>

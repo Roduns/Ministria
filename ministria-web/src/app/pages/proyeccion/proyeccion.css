@@ -1,0 +1,137 @@
+body {
+
+  margin: 0;
+
+}
+
+.contenedor {
+
+  min-height: 100vh;
+
+  background: #000;
+
+  color: white;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 40px;
+
+}
+
+.contenido {
+
+  width: 100%;
+
+  max-width: 1600px;
+
+}
+
+.contenido h2 {
+
+  font-size: 60px;
+
+  font-weight: 600;
+
+  margin-bottom: 40px;
+
+}
+
+.contenido p {
+
+  font-size: 52px;
+
+  line-height: 1.7;
+
+  margin: 0 auto;
+
+  max-width: 1500px;
+
+}
+
+.imagen {
+
+  max-width: 95vw;
+
+  max-height: 85vh;
+
+  border-radius: 12px;
+
+  object-fit: contain;
+
+}
+
+.video {
+
+  max-width: 95vw;
+
+  max-height: 85vh;
+
+  border-radius: 12px;
+
+}
+
+.youtube {
+
+  width: 95vw;
+
+  height: 80vh;
+
+  border: none;
+
+  border-radius: 12px;
+
+}
+
+.flecha {
+
+  position: fixed;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  background: transparent;
+
+  border: none;
+
+  color: rgba(255,255,255,0.12);
+
+  font-size: 90px;
+
+  font-weight: 100;
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+
+  z-index: 999;
+
+  padding: 0;
+
+}
+
+.flecha:hover {
+
+  color: rgba(255,255,255,0.5);
+
+}
+
+.izquierda {
+
+  left: 20px;
+
+}
+
+.derecha {
+
+  right: 20px;
+
+}

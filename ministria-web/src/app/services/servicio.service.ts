@@ -5,23 +5,67 @@ import { Injectable } from '@angular/core';
 })
 export class ServicioService {
 
-  elementos: any[] = [];
+  elementos: any[] =
+    JSON.parse(
+      localStorage.getItem('servicio') || '[]'
+    );
 
   agregarElemento(elemento: any) {
 
-    console.log('Añadiendo:', elemento);
+    const elementosActuales =
+      JSON.parse(
+        localStorage.getItem('servicio') || '[]'
+      );
 
-    this.elementos.push(elemento);
+    elementosActuales.push(elemento);
 
-    console.log('Lista actual:', this.elementos);
+    this.elementos = elementosActuales;
+
+    localStorage.setItem(
+      'servicio',
+      JSON.stringify(elementosActuales)
+    );
 
   }
 
   obtenerElementos() {
 
-    console.log('Obteniendo:', this.elementos);
+    this.elementos =
+      JSON.parse(
+        localStorage.getItem('servicio') || '[]'
+      );
 
     return this.elementos;
+
+  }
+
+  eliminarElemento(index: number) {
+
+    this.elementos.splice(index, 1);
+
+    localStorage.setItem(
+      'servicio',
+      JSON.stringify(this.elementos)
+    );
+
+  }
+
+  actualizar() {
+
+    localStorage.setItem(
+      'servicio',
+      JSON.stringify(this.elementos)
+    );
+
+  }
+
+  limpiar() {
+
+    this.elementos = [];
+
+    localStorage.removeItem(
+      'servicio'
+    );
 
   }
 

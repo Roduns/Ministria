@@ -1,9 +1,74 @@
 <div class="contenedor">
 
-  <h1>📺 Proyección</h1>
+  <div *ngIf="elementos.length === 0">
 
-  <p>
-    Pantalla de control de proyección.
-  </p>
+    <h2>
+      No hay elementos para proyectar
+    </h2>
+
+  </div>
+
+  <div
+    *ngIf="elementoActual"
+    class="contenido">
+
+    <h2 *ngIf="elementoActual.referencia">
+      {{ elementoActual.referencia }}
+    </h2>
+
+    <p *ngIf="elementoActual.texto">
+      {{ elementoActual.texto }}
+    </p>
+
+    <h2 *ngIf="elementoActual.titulo">
+      {{ elementoActual.titulo }}
+    </h2>
+
+    <p *ngIf="elementoActual.contenido">
+      {{ elementoActual.contenido }}
+    </p>
+
+    <iframe
+      *ngIf="elementoActual.tipo === 'youtube'"
+      [src]="obtenerYoutubeUrl(
+        'https://www.youtube.com/watch?v=' +
+        elementoActual.videoId
+      )"
+      class="youtube"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+
+    <img
+      *ngIf="elementoActual.tipo === 'imagen'"
+      [src]="elementoActual.url"
+      class="imagen"
+    >
+
+    <video
+      *ngIf="elementoActual.tipo === 'video'"
+      [src]="elementoActual.url"
+      controls
+      autoplay
+      class="video">
+    </video>
+
+  </div>
+
+  <button
+    class="flecha izquierda"
+    (click)="anterior()">
+
+    ❮
+
+  </button>
+
+  <button
+    class="flecha derecha"
+    (click)="siguiente()">
+
+    ❯
+
+  </button>
 
 </div>

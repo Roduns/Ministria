@@ -4,6 +4,7 @@ import { Biblia } from './pages/biblia/biblia';
 import { Servicio } from './pages/servicio/servicio';
 import { Alabanzas } from './pages/alabanzas/alabanzas';
 import { Multimedia } from './pages/multimedia/multimedia';
+import { Proyeccion } from './pages/proyeccion/proyeccion';
 
 export const routes: Routes = [
 
@@ -25,6 +26,11 @@ export const routes: Routes = [
   {
     path: 'servicio',
     component: Servicio
+  },
+
+  {
+    path: 'proyeccion',
+    component: Proyeccion
   }
 
 ];

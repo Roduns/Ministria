@@ -34,6 +34,7 @@ export class Biblia {
           'Formato incorrecto. Ejemplo: Juan 3:16';
 
         return;
+
       }
 
       const libro =
@@ -117,6 +118,15 @@ export class Biblia {
 
     window.open(
       window.location.origin + '/multimedia',
+      '_blank'
+    );
+
+  }
+
+  abrirServicio() {
+
+    window.open(
+      window.location.origin + '/servicio',
       '_blank'
     );
 
